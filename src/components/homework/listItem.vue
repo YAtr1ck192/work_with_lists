@@ -28,5 +28,4 @@ export default {
 .listContent{
     border: solid 1px black;
 }
-
 </style>

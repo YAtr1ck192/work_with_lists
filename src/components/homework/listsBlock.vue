@@ -2,10 +2,10 @@
     <div class="block">
         <div class="fb">
             <listItem
-                    v-for="(item) in items"
-                    :key="item.id"
-                    :list="item"
-                    class="elem"
+                v-for="(item) in items"
+                :key="item.id"
+                :list="item"
+                class="elem"
             />
         </div>
 
@@ -31,6 +31,7 @@
                 :clearList="item"
                 class="elem"
             />
+            <clearList />
         </div>
     </div>
 </template>
@@ -56,7 +57,7 @@ export default {
             ],
             index: '',
             i: '',
-            count: 0
+            count: 0,
         }
     },
     components: {
@@ -104,32 +105,32 @@ export default {
 </script>
 
 <style scoped>
-  .block {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 10px;
-  }
-  .onRight img {
-      transform: rotate(180deg);
-  }
-  .buttons{
-      display: flex;
-      flex-direction: row;
-      max-width: 320px;
-      max-height: 150px;
-  }
-  button img{
-      max-width: 150px;
-      max-height: 150px;
-      cursor: pointer;
-  }
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 180px;
+}
+.onRight img {
+    transform: rotate(180deg);
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    max-width: 320px;
+    max-height: 150px;
+}
+button img{
+    max-width: 150px;
+    max-height: 150px;
+    cursor: pointer;
+}
 .sb, .fb {
     border: solid 1px black;
     width: 240px;
     height: 640px;
 }
-  .elem {
-      padding: 55px 100px;
-  }
+.elem {
+    padding: 55px 100px;
+}
 </style>
