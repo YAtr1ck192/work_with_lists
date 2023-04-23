@@ -11,10 +11,6 @@
 <script>
 export default {
     name: "listItem",
-    data () {
-        return {
-        }
-    },
     props: ['list'],
     methods: {
         pickItem () {

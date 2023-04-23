@@ -12,11 +12,6 @@
 
 export default {
     name: "clearList",
-    data () {
-        return{
-            pick: false
-        }
-    },
     props: ['clearList'],
     methods: {
         pickItem () {
