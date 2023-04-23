@@ -6,6 +6,7 @@
                 :key="item.id"
                 :list="item"
                 class="elem"
+                @pickItem="pickItem"
             />
         </div>
 
@@ -30,6 +31,7 @@
                 :key="item.id"
                 :clearList="item"
                 class="elem"
+                @pickClearListItem="pickClearListItem"
             />
             <clearList />
         </div>
@@ -42,8 +44,6 @@ import listItem from "@/components/homework/listItem.vue";
 
 export default {
     name: "listsBlock",
-    computed: {
-    },
     data () {
         return {
             items: [
@@ -65,6 +65,12 @@ export default {
         listItem
     },
     methods: {
+        pickItem (list) {
+            list.pick = !list.pick
+        },
+        pickClearListItem (list) {
+            list.pick = !list.pick
+        },
         onRight() {
             for (let j = 0; j <= this.count; j++){
                 for (this.i = 0; this.i < this.items.length; this.i++){

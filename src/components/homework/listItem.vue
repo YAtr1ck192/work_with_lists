@@ -2,7 +2,7 @@
     <div
         :class="[{'picked' : list.pick === true}, 'elem']"
         :id="list.id"
-        @click="pickItem(list.pick)"
+        @click="$emit('pickItem', list)"
     >
         {{ list.itemName }}
     </div>
@@ -13,10 +13,7 @@ export default {
     name: "listItem",
     props: ['list'],
     methods: {
-        pickItem () {
-            // eslint-disable-next-line vue/no-mutating-props
-            this.list.pick = !this.list.pick
-        },
+
     }
 }
 </script>

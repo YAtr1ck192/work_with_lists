@@ -2,7 +2,7 @@
     <div
         :class="[{'picked' : clearList.pick === true}, 'elem']"
         :id="clearList.id"
-        @click="pickItem(clearList.pick)"
+        @click="$emit('pickClearListItem', clearList)"
     >
         {{ clearList.itemName }}
     </div>
@@ -13,12 +13,6 @@
 export default {
     name: "clearList",
     props: ['clearList'],
-    methods: {
-        pickItem () {
-            // eslint-disable-next-line vue/no-mutating-props
-            this.clearList.pick = !this.clearList.pick
-        },
-    }
 }
 </script>
 
